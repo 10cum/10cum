@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10cum | Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #fff;
+    }
+    .glass-bio {
+      background: rgba(30, 30, 30, 0.38);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      border-radius: 22px;
+      border: 1.5px solid rgba(255,255,255,0.10);
+      padding: 44px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 340px;
+      max-width: 92vw;
+      position: relative;
+      transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+      will-change: transform;
+    }
+    .nickname {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 16px #0008;
+      text-align: center;
+      user-select: text;
+    }
+    .avatar {
+      width: 92px;
+      height: 92px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.22);
+      transition: box-shadow 0.35s cubic-bezier(.4,2,.6,1), border-color 0.35s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border: 1.5px solid rgba(255,255,255,0.10);
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      transition: filter 0.35s, transform 0.35s;
+    }
+    .avatar:hover {
+      box-shadow: 0 8px 40px 0 rgba(255,0,80,0.18), 0 2px 24px 0 rgba(0,255,255,0.08);
+      border-color: #ff0050;
+    }
+    .avatar:hover img {
+      filter: brightness(1.15) grayscale(0.2) blur(0.5px);
+      transform: scale(1.04) rotate(-2deg);
+    }
+    .bio-text {
+      color: #fff;
+      font-size: 1.08rem;
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.93;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.10);
+      border-radius: 8px;
+      padding: 4px 16px;
+      font-size: 0.98rem;
+      color: #fff;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
+    }
+    .links {
+      display: flex;
+      gap: 16px;
+      margin-top: 18px;
+      justify-content: center;
+    }
+    .link-btn {
+      background: rgba(255,255,255,0.10);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      padding: 9px 20px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .link-btn:hover {
+      background: #ff0050;
+      color: #fff;
+    }
+    .link-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .glass-bio { padding: 20px 4px; min-width: unset; }
+      .nickname { font-size: 1.4rem; }
+      .avatar { width: 60px; height: 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-bio" id="bioCard">
+    <div class="nickname">10cum</div>
+    <div class="avatar" title="Наведи на меня!">
+      <img src="./images/avatar.png" alt="avatar">
+    </div>
+    <div class="tag">создатель сервака mc.mikeworld.space</div>
+    <div class="bio-text">
+      <b>Открой для себя уникальный Minecraft-сервер!</b><br>
+      <a href="https://mc.mikeworld.space" target="_blank" style="color:#00fff0;text-decoration:underline;">mc.mikeworld.space</a> — твой мир творчества, друзей и приключений.<br>
+      <span style="opacity:0.7;">Пиши в Telegram, если хочешь попасть в команду!</span>
+    </div>
+    <div class="links">
+      <a class="link-btn" href="https://github.com/10cum" target="_blank" title="Github">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.338 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.579.688.481C19.138 20.2 22 16.448 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+        Github
+      </a>
+      <a class="link-btn" href="https://t.me/cum052" target="_blank" title="Telegram">
+        <svg viewBox="0 0 24 24"><path d="M9.036 16.572c-.396 0-.327-.15-.464-.522l-1.16-3.824 8.84-5.236c.39-.236.755-.104.623.368l-1.51 7.08c-.108.48-.396.6-.804.372l-2.232-1.644-1.076 1.036c-.12.12-.228.228-.468.228zm-2.1-4.02l1.56 4.824c.168.516.3.708.792.708.156 0 .336-.06.528-.18l2.1-1.548 2.184 1.608c.42.312.72.156.828-.372l1.512-7.08c.12-.54-.204-.78-.66-.576l-8.844 5.232c-.456.264-.444.636.012.804z"/></svg>
+        Telegram
+      </a>
+      <a class="link-btn" href="https://discord.com/users/1171064729779830854" target="_blank" title="Discord">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.0371A19.7363 19.7363 0 0 0 3.677 4.3698a.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5492-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.8732.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6603a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1835 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.1046 2.1568 2.4189 0 1.3333-.9555 2.419-2.1569 2.419zm7.9748 0c-1.1836 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.1046 2.1568 2.4189 0 1.3333-.946 2.419-2.1568 2.419Z"/></svg>
+        Discord
+      </a>
+    </div>
+    <audio id="bg-music" src="music/track.mp3" autoplay loop></audio>
+  </div>
+  <script>
+    // 3D-поворот панели в сторону мышки
+    const card = document.getElementById('bioCard');
+    document.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * 10; // max 10deg
+      const rotateY = ((x - centerX) / centerX) * -10; // max 10deg
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    document.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+    // Автозапуск музыки после первого взаимодействия пользователя (если браузер блокирует)
+    const bgMusic = document.getElementById('bg-music');
+    bgMusic.volume = 0.7;
+    function tryPlayMusic() {
+      if (bgMusic.paused) {
+        bgMusic.play().catch(()=>{});
+      }
+      document.removeEventListener('click', tryPlayMusic);
+      document.removeEventListener('keydown', tryPlayMusic);
+    }
+    document.addEventListener('click', tryPlayMusic);
+    document.addEventListener('keydown', tryPlayMusic);
+    // Скрыть стандартный плеер
+    bgMusic.style.display = 'none';
+  </script>
+</body>
+</html> 
