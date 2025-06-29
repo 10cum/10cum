@@ -15,6 +15,19 @@
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       color: #fff;
+      background-image: url('./standard.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      left: 0; top: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background: rgba(10,10,10,0.55);
+      pointer-events: none;
     }
     .glass-bio {
       background: rgba(30, 30, 30, 0.38);
@@ -32,6 +45,7 @@
       position: relative;
       transition: transform 0.25s cubic-bezier(.4,2,.6,1);
       will-change: transform;
+      z-index: 1;
     }
     .nickname {
       font-size: 2.3rem;
